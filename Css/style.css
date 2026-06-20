@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: radial-gradient(circle, #111, #000);
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+
+/* ===================== MENU ===================== */
+
+.menu-body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.menu{
+    background: rgba(255,255,255,0.03);
+    padding:40px 60px;
+    border-radius:15px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 25px rgba(0,255,136,0.15);
+    animation: float 3s ease-in-out infinite;
+}
+
+.menu h1{
+    font-size:50px;
+    color:#00ff88;
+    margin-bottom:10px;
+    text-shadow:0 0 10px rgba(0,255,136,0.4);
+}
+
+.subtitle{
+    color:#aaa;
+    margin-bottom:25px;
+}
+
+/* botão jogar */
+.play-btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#00ff88;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+    transition:0.2s;
+    box-shadow:0 0 15px rgba(0,255,136,0.3);
+}
+
+.play-btn:hover{
+    transform:scale(1.08);
+}
+
+/* animação leve do menu */
+@keyframes float{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-8px); }
+}
+
+/* ===================== JOGO ===================== */
+
+h1{
+    color:#00ff88;
+    margin:20px;
+}
+
+.game-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    align-items:flex-start;
+}
+
+/* canvas mais bonito */
+canvas{
+    width:600px;
+    height:600px;
+    background:#000;
+    border:3px solid #00ff88;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(0,255,136,0.2);
+}
+
+/* painel lateral */
+.info{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* cards */
+.card, .controls-card{
+    background:#1f1f1f;
+    padding:15px;
+    border-radius:10px;
+    min-width:180px;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+/* CONTROLES BONITOS */
+.controls{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+}
+
+.row{
+    display:flex;
+    gap:8px;
+}
+
+.key{
+    width:45px;
+    height:45px;
+    background:#2b2b2b;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    color:#00ff88;
+    border:1px solid #00ff88;
+    box-shadow:0 0 8px rgba(0,255,136,0.2);
+}
+
+/* botão */
+button{
+    padding:12px;
+    background:#00ff88;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 10px rgba(0,255,136,0.3);
+}
